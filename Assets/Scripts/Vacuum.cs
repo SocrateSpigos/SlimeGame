@@ -6,7 +6,6 @@ public class Vacuum : MonoBehaviour
 {
     public Transform Slime;
     public Transform NewSlimePos;
-    public float Speed = 1f;
     public bool suck = false;
    
     public Vector3 minScale;
@@ -15,6 +14,7 @@ public class Vacuum : MonoBehaviour
     public float speed = 2f;
     public float duration = 5f;
     public GameObject isVisible;
+    public GameObject Icosphere;
 
 
     void Start()
@@ -25,16 +25,18 @@ public class Vacuum : MonoBehaviour
     {
         if (other.tag == ("Player"))
         {
-            Debug.Log("True");
             suck = true;
             yield return RepeatLerp(maxScale, minScale, duration);
         }
 
         if (other.tag == ("Vacuum"))
         {
-            Destroy(isVisible, 0.5f);
+            ScoreSystem.slimeScore += 1;
 
-            gameObject.SetActive(false);
+            Destroy(isVisible, 0.5f);
+            Destroy(Icosphere, 0.5f);
+
+            //gameObject.SetActive(false);
 
         }
     }
@@ -51,8 +53,8 @@ public class Vacuum : MonoBehaviour
     void PositionChanging()
     {
 
-        Slime.transform.position = Vector3.Lerp(Slime.position, NewSlimePos.position, Time.deltaTime * Speed);
-        Slime.transform.rotation = Quaternion.Lerp(Slime.rotation, NewSlimePos.rotation, Time.deltaTime * Speed);
+        Slime.transform.position = Vector3.Lerp(Slime.position, NewSlimePos.position, Time.deltaTime * speed);
+        Slime.transform.rotation = Quaternion.Lerp(Slime.rotation, NewSlimePos.rotation, Time.deltaTime * speed);
 
     }
 
