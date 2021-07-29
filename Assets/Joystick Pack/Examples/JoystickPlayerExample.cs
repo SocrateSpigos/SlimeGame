@@ -7,6 +7,12 @@ public class JoystickPlayerExample : MonoBehaviour
     public float speed;
     public VariableJoystick variableJoystick;
     public Rigidbody rb;
+    public Animator anim;
+
+    void Start()
+    {
+
+    }
 
     public void FixedUpdate()
     {
