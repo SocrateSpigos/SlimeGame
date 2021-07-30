@@ -7,6 +7,7 @@ public class ScoreSystem : MonoBehaviour
 {
     public GameObject slimeText;
     public static int slimeScore;
+    public int slime;
     
     public GameObject goldText;
     public static int goldScore;
@@ -27,7 +28,8 @@ public class ScoreSystem : MonoBehaviour
             nextGold += 5;
         }
 
-
+        slime = slimeScore;
+        slimeScore = slime;
     }
 
 }

@@ -11,8 +11,14 @@ public class SetActive : MonoBehaviour
     {
         if (other.tag == "Vacuum")
         {
-            nextTerrain.SetActive(true);
-            mySelf.SetActive(false);
+           /* nextTerrain.SetActive(true);
+            mySelf.SetActive(false);*/
         }
+    }
+
+    public void NextMap()
+    {
+        nextTerrain.SetActive(true);
+        mySelf.SetActive(false);
     }
 }
