@@ -10,15 +10,15 @@
     --------------------------------------------------
  */
 
-using System;
+/*using System;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace CodeMonkey.Utils {
 
-    /*
+    *//*
      * Sprite in the UI
-     * */
+     * *//*
     public class UI_Sprite {
 
         private static Transform GetCanvasTransform() {
@@ -128,4 +128,4 @@ namespace CodeMonkey.Utils {
 
     }
 
-}
+}*/

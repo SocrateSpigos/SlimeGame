@@ -10,14 +10,14 @@
     --------------------------------------------------
  */
 
-using UnityEngine;
+/*using UnityEngine;
 using UnityEngine.UI;
 
 namespace CodeMonkey.Utils {
     
-    /*
+    *//*
      * Displays text with icons in between the text
-     * */
+     * *//*
     public class UI_TextComplex {
         
         private static Transform GetCanvasTransform() {
@@ -149,3 +149,4 @@ namespace CodeMonkey.Utils {
     }
 
 }
+*/

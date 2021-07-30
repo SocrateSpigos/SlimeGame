@@ -10,15 +10,15 @@
     --------------------------------------------------
  */
 
-using System;
+/*using System;
 using UnityEngine;
 using CodeMonkey.Utils;
 
 namespace CodeMonkey {
 
-    /*
+    *//*
      * Debug Class with various helper functions to quickly create buttons, text, etc
-     * */
+     * *//*
     public static class CMDebug {
 
         // Creates a Button in the World
@@ -170,4 +170,4 @@ namespace CodeMonkey {
 
     }
 
-}
+}*/
