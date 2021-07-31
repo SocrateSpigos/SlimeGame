@@ -11,6 +11,7 @@ public class BuyMap : MonoBehaviour
 
     public GameObject nextTerrain;
     public GameObject mySelf;
+    public GameObject theOther;
 
     void Awake()
     {
@@ -20,7 +21,7 @@ public class BuyMap : MonoBehaviour
      
     void OnTriggerStay(Collider other)
     {
-        if(other.tag == "Vacuum" && score.slime>0)
+        if(other.tag == "Vacuum" || other.tag == "Trigger" && score.slime>0)
         {
             InvokeRepeating("Spend",0f, 3f);
         }
@@ -42,6 +43,7 @@ public class BuyMap : MonoBehaviour
 
             nextTerrain.SetActive(true);
             mySelf.SetActive(false);
+            theOther.SetActive(false);
         }
     }
 
