@@ -35,6 +35,7 @@ public class BuyMap : MonoBehaviour
             score.slime -= 1;
             price -= 1;
             ScoreSystem.slimeScore -= 1;
+            score.nextGold -= 1;
 
             text.text = price.ToString();
         }

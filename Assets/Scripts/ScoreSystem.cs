@@ -12,7 +12,7 @@ public class ScoreSystem : MonoBehaviour
     public GameObject goldText;
     public static int goldScore;
 
-    int nextGold = 5;
+    public int nextGold = 5;
 
 
 

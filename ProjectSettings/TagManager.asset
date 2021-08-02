@@ -9,6 +9,8 @@ TagManager:
   - Terrain
   - Joystick
   - Trigger
+  - Enemy
+  - Character
   layers:
   - Default
   - TransparentFX
@@ -16,8 +18,8 @@ TagManager:
   - ground
   - Water
   - UI
-  - 
-  - 
+  - Trigger
+  - Walkable
   - 
   - 
   - 

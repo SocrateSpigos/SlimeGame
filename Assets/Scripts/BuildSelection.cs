@@ -11,6 +11,8 @@ public class BuildSelection : MonoBehaviour
     public GameObject medBay;
     public GameObject turrets;
 
+    
+
     public void spawnSlimeFactory()
     {
         Instantiate(slimeFactory);
@@ -18,10 +20,11 @@ public class BuildSelection : MonoBehaviour
 
     public void spawnCommandCenter()
     {
-        if (ScoreSystem.goldScore >= 5)
+        if (ScoreSystem.goldScore >= 50)
         {
             Instantiate(commandCenter);
-            ScoreSystem.goldScore -= 5;
+            ScoreSystem.goldScore -= 50;
+
         }
     }
 
