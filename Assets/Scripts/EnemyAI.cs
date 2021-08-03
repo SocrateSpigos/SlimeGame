@@ -15,7 +15,7 @@ public class EnemyAI : MonoBehaviour
     {
        // target = player.transform.Find("Character");
         rb = GetComponent<Rigidbody>();
-        InvokeRepeating("Approach", 0f, 1f);
+       // InvokeRepeating("Approach", 0f, 1f);
     }
 
 
