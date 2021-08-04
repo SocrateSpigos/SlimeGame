@@ -7,25 +7,33 @@ using UnityEngine.UI;
 public class Buttns : MonoBehaviour
 {
     private Button btn;
-    public GameObject hub;
     public int price;
-    public BuildSelection build;
+    public BuildSelection builder;
     public GameObject canvas;
+    public bool hub;
+
+    void Start()
+    {
+        builder = canvas.GetComponent<BuildSelection>();
+    }
 
     void Awake()
     {
         btn.interactable = false;
-        build = canvas.GetComponent<BuildSelection>();
     }
 
 
     void Update()
     {
+        hub = builder.cM;
+        Debug.Log("hub");
         if (ScoreSystem.goldScore > price)
         {
+            if (hub)
+            {
 
-            btn.interactable = true;
-
+                btn.interactable = true;
+            }
         }
 
         else

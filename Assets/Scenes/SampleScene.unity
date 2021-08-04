@@ -17690,7 +17690,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   btn: {fileID: 0}
-  price: 50
+  price: 20
 --- !u!1 &434909890
 GameObject:
   m_ObjectHideFlags: 0
@@ -26309,6 +26309,7 @@ GameObject:
   - component: {fileID: 635807836}
   - component: {fileID: 635807835}
   - component: {fileID: 635807838}
+  - component: {fileID: 635807839}
   m_Layer: 5
   m_Name: Refinery
   m_TagString: Untagged
@@ -26437,13 +26438,29 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 635807833}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8511a3ffb99a2ee42a26f733b9aa2fc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   btn: {fileID: 635807835}
   price: 15
+--- !u!114 &635807839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635807833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2332969de9f94e43a25441885b876a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 20
+  builder: {fileID: 1803793430}
+  canvas: {fileID: 1803793429}
+  hub: 0
 --- !u!1 &636733857 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3929703047269529566, guid: 1dd85b90797ff3b4c983e3b013f56505, type: 3}
@@ -67399,6 +67416,7 @@ GameObject:
   - component: {fileID: 1658921941}
   - component: {fileID: 1658921940}
   - component: {fileID: 1658921943}
+  - component: {fileID: 1658921944}
   m_Layer: 5
   m_Name: Market
   m_TagString: Untagged
@@ -67527,13 +67545,29 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1658921938}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8511a3ffb99a2ee42a26f733b9aa2fc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   btn: {fileID: 1658921940}
   price: 30
+--- !u!114 &1658921944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658921938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2332969de9f94e43a25441885b876a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 40
+  builder: {fileID: 1803793430}
+  canvas: {fileID: 1803793429}
+  hub: 0
 --- !u!1001 &1660064127
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -72432,6 +72466,7 @@ GameObject:
   - component: {fileID: 1760600613}
   - component: {fileID: 1760600612}
   - component: {fileID: 1760600615}
+  - component: {fileID: 1760600616}
   m_Layer: 5
   m_Name: LevelingStation
   m_TagString: Untagged
@@ -72560,13 +72595,29 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1760600610}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8511a3ffb99a2ee42a26f733b9aa2fc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   btn: {fileID: 1760600612}
   price: 40
+--- !u!114 &1760600616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1760600610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2332969de9f94e43a25441885b876a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 50
+  builder: {fileID: 1803793430}
+  canvas: {fileID: 1803793429}
+  hub: 0
 --- !u!1 &1764305515
 GameObject:
   m_ObjectHideFlags: 0
@@ -73992,6 +74043,7 @@ MonoBehaviour:
   levelingStation: {fileID: 736451937437359768, guid: 4093f1bea8d659c429a38898f22c2cd0, type: 3}
   medBay: {fileID: 4214126880817369488, guid: b1c06477e590ec14a8b047c287727e6e, type: 3}
   turrets: {fileID: 1403619407598778866, guid: 3051a41e0b7f3164d872e76f124452d3, type: 3}
+  cM: 0
 --- !u!114 &1803793431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82755,6 +82807,7 @@ GameObject:
   - component: {fileID: 2039591909}
   - component: {fileID: 2039591908}
   - component: {fileID: 2039591911}
+  - component: {fileID: 2039591912}
   m_Layer: 5
   m_Name: Turrets
   m_TagString: Untagged
@@ -82883,13 +82936,29 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2039591906}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8511a3ffb99a2ee42a26f733b9aa2fc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   btn: {fileID: 2039591908}
   price: 30
+--- !u!114 &2039591912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2039591906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2332969de9f94e43a25441885b876a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 60
+  builder: {fileID: 1803793430}
+  canvas: {fileID: 1803793429}
+  hub: 0
 --- !u!1 &2039813245 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5617505697723769859, guid: 1dd85b90797ff3b4c983e3b013f56505, type: 3}
@@ -85147,6 +85216,7 @@ GameObject:
   - component: {fileID: 2104063685}
   - component: {fileID: 2104063684}
   - component: {fileID: 2104063687}
+  - component: {fileID: 2104063688}
   m_Layer: 5
   m_Name: MedBay
   m_TagString: Untagged
@@ -85275,13 +85345,29 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2104063682}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8511a3ffb99a2ee42a26f733b9aa2fc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   btn: {fileID: 2104063684}
   price: 20
+--- !u!114 &2104063688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104063682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2332969de9f94e43a25441885b876a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 40
+  builder: {fileID: 1803793430}
+  canvas: {fileID: 1803793429}
+  hub: 0
 --- !u!1 &2106369569
 GameObject:
   m_ObjectHideFlags: 0
