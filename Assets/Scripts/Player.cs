@@ -5,40 +5,47 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private Rigidbody myBody;
-    public float moveForce = 10f;
-
+    public float moveForce = 500f;
     public VariableJoystick joystick;
-
-    // private PlayerAnimation anim;
     public Animator anim;
+    private int currentHP;
+
 
     void Awake()
     {
         myBody = GetComponent<Rigidbody>();
-        joystick = GameObject.FindWithTag("Joystick").GetComponent<VariableJoystick>();
-        //anim = GetComponent<PlayerAnimation>();
         anim = GetComponent<Animator>();
+
     }
+    
 
     void Update()
     {
-        myBody.velocity = new Vector3(joystick.Horizontal * moveForce, myBody.velocity.y,joystick.Vertical * moveForce);
+        PlayerHP playerHp = GetComponent<PlayerHP>();
 
+        myBody.velocity = new Vector3(joystick.Horizontal * moveForce * Time.deltaTime, myBody.velocity.y,joystick.Vertical * moveForce *Time.deltaTime);
 
-        if (joystick.Horizontal !=0f || joystick.Vertical != 0f)
+        if (playerHp.currentHealth > 0)
         {
-            anim.SetBool("Run",true);
-            anim.SetBool("Idle",false);
+            if (joystick.Horizontal != 0f || joystick.Vertical != 0f)
+            {
+                anim.SetBool("Run", true);
+                anim.SetBool("Idle", false);
 
-            transform.rotation = Quaternion.LookRotation(myBody.velocity);
+                transform.rotation = Quaternion.LookRotation(myBody.velocity);
+            }
+            else
+            {
+                anim.SetBool("Run", false);
+                anim.SetBool("Idle", true);
+            }
+
         }
         else
         {
-            anim.SetBool("Run", false);
-            anim.SetBool("Idle", true);
+            anim.SetBool("Die", true);
+            moveForce = 0f;
         }
-
-
 
     }
 

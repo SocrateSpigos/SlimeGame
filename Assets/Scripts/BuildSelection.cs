@@ -10,6 +10,7 @@ public class BuildSelection : MonoBehaviour
     public GameObject levelingStation;
     public GameObject medBay;
     public GameObject turrets;
+    public bool cM = false;
 
     
 
@@ -20,11 +21,11 @@ public class BuildSelection : MonoBehaviour
 
     public void spawnCommandCenter()
     {
-        if (ScoreSystem.goldScore >= 50)
+        if (ScoreSystem.goldScore >= 20)
         {
             Instantiate(commandCenter);
-            ScoreSystem.goldScore -= 50;
-
+            ScoreSystem.goldScore -= 20;
+            cM = true;
         }
     }
 

@@ -81,7 +81,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5618791823257418189, guid: 13d0fc4ee2cf7624a9c0e4f776b4a6f6, type: 3}
       propertyPath: m_Name
-      value: Slime
+      value: Slime Variant 1
       objectReference: {fileID: 0}
     - target: {fileID: 9161622302287867859, guid: 13d0fc4ee2cf7624a9c0e4f776b4a6f6, type: 3}
       propertyPath: m_Materials.Array.data[0]

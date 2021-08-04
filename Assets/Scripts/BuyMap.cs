@@ -30,7 +30,7 @@ public class BuyMap : MonoBehaviour
 
     void Spend()
     {
-        if (price > 0)
+        if (price > 0 && ScoreSystem.slimeScore >0)
         {
             score.slime -= 1;
             price -= 1;
@@ -39,7 +39,7 @@ public class BuyMap : MonoBehaviour
 
             text.text = price.ToString();
         }
-        else
+        else if (price == 0)
         {
 
             nextTerrain.SetActive(true);

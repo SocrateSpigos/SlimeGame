@@ -69,6 +69,50 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isShrink: 0
   Icosphere: {fileID: 40154715714171730}
+--- !u!114 &1249258412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656492055142948832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13f69e8c8d002d94d952722329c24ea8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Slime: {fileID: 4023476389232977603}
+  NewSlimePos: {fileID: 0}
+  suck: 0
+  minScale: {x: 0, y: 0, z: 0}
+  maxScale: {x: 0, y: 0, z: 0}
+  repeatable: 0
+  speed: 20
+  duration: 2
+  isVisible: {fileID: 1656492055142948832}
+  Icosphere: {fileID: 3798091077090331489}
+--- !u!114 &1500695302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3726279467901132124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13f69e8c8d002d94d952722329c24ea8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Slime: {fileID: 5229383568694032708}
+  NewSlimePos: {fileID: 0}
+  suck: 0
+  minScale: {x: 0, y: 0, z: 0}
+  maxScale: {x: 0, y: 0, z: 0}
+  repeatable: 0
+  speed: 20
+  duration: 2
+  isVisible: {fileID: 3726279467901132124}
+  Icosphere: {fileID: 3798091077090331489}
 --- !u!135 &451195374
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -104,19 +148,19 @@ MonoBehaviour:
   duration: 2
   isVisible: {fileID: 4680846174233962905}
   Icosphere: {fileID: 3798091077090331489}
---- !u!114 &1500695302
+--- !u!114 &1766473306
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3726279467901132124}
+  m_GameObject: {fileID: 4898242692245956489}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13f69e8c8d002d94d952722329c24ea8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Slime: {fileID: 5229383568694032708}
+  Slime: {fileID: 12309832512928701}
   NewSlimePos: {fileID: 0}
   suck: 0
   minScale: {x: 0, y: 0, z: 0}
@@ -124,21 +168,21 @@ MonoBehaviour:
   repeatable: 0
   speed: 20
   duration: 2
-  isVisible: {fileID: 3726279467901132124}
+  isVisible: {fileID: 4898242692245956489}
   Icosphere: {fileID: 3798091077090331489}
---- !u!114 &1676263265
+--- !u!114 &742092001
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6411414374510615617}
+  m_GameObject: {fileID: 5091653514724584542}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13f69e8c8d002d94d952722329c24ea8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Slime: {fileID: 4576746798799790517}
+  Slime: {fileID: 1313563971096902893}
   NewSlimePos: {fileID: 0}
   suck: 0
   minScale: {x: 0, y: 0, z: 0}
@@ -146,7 +190,7 @@ MonoBehaviour:
   repeatable: 0
   speed: 20
   duration: 2
-  isVisible: {fileID: 6411414374510615617}
+  isVisible: {fileID: 5091653514724584542}
   Icosphere: {fileID: 3798091077090331489}
 --- !u!114 &1954063407
 MonoBehaviour:
@@ -170,19 +214,19 @@ MonoBehaviour:
   duration: 2
   isVisible: {fileID: 5245032051276500609}
   Icosphere: {fileID: 3798091077090331489}
---- !u!114 &1766473306
+--- !u!114 &1676263265
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4898242692245956489}
+  m_GameObject: {fileID: 6411414374510615617}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13f69e8c8d002d94d952722329c24ea8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Slime: {fileID: 12309832512928701}
+  Slime: {fileID: 4576746798799790517}
   NewSlimePos: {fileID: 0}
   suck: 0
   minScale: {x: 0, y: 0, z: 0}
@@ -190,51 +234,7 @@ MonoBehaviour:
   repeatable: 0
   speed: 20
   duration: 2
-  isVisible: {fileID: 4898242692245956489}
-  Icosphere: {fileID: 3798091077090331489}
---- !u!114 &1249258412
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1656492055142948832}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13f69e8c8d002d94d952722329c24ea8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Slime: {fileID: 4023476389232977603}
-  NewSlimePos: {fileID: 0}
-  suck: 0
-  minScale: {x: 0, y: 0, z: 0}
-  maxScale: {x: 0, y: 0, z: 0}
-  repeatable: 0
-  speed: 20
-  duration: 2
-  isVisible: {fileID: 1656492055142948832}
-  Icosphere: {fileID: 3798091077090331489}
---- !u!114 &742092001
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5091653514724584542}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13f69e8c8d002d94d952722329c24ea8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Slime: {fileID: 1313563971096902893}
-  NewSlimePos: {fileID: 0}
-  suck: 0
-  minScale: {x: 0, y: 0, z: 0}
-  maxScale: {x: 0, y: 0, z: 0}
-  repeatable: 0
-  speed: 20
-  duration: 2
-  isVisible: {fileID: 5091653514724584542}
+  isVisible: {fileID: 6411414374510615617}
   Icosphere: {fileID: 3798091077090331489}
 --- !u!1001 &5582033499299482271
 PrefabInstance:
@@ -326,6 +326,10 @@ PrefabInstance:
     - target: {fileID: 5618791823257418189, guid: 13d0fc4ee2cf7624a9c0e4f776b4a6f6, type: 3}
       propertyPath: m_Name
       value: Slime Variant 1 (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5618791823257418189, guid: 13d0fc4ee2cf7624a9c0e4f776b4a6f6, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     - target: {fileID: 6596180656384824703, guid: 13d0fc4ee2cf7624a9c0e4f776b4a6f6, type: 3}
       propertyPath: m_IsActive

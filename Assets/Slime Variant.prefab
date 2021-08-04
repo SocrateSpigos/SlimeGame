@@ -25,7 +25,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: a2bd071fed35e6c4fb29633a6ad90115, type: 2}
     - target: {fileID: 3694862449463303469, guid: 48ec5b8b1f739c24dab7950a275cde06, type: 3}
       propertyPath: m_Name
-      value: Slime
+      value: Slime Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3694862449463303469, guid: 48ec5b8b1f739c24dab7950a275cde06, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     - target: {fileID: 4038912473141659543, guid: 48ec5b8b1f739c24dab7950a275cde06, type: 3}
       propertyPath: m_RootOrder

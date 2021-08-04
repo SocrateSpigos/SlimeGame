@@ -22,22 +22,42 @@ public class BluePrint : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Building")
+        if (other.tag == "Building" || other.tag =="Enemy" || other.tag =="Character" )
         {
             canBuild = false;
             Debug.Log("false");
         }
+
+        if (other.tag == "Terrain")
+        {
+            canBuild = true;
+        }
     }
-    
-    void OnTriggerExit(Collider other)
+
+    void OnTriggerStay(Collider other)
     {
-        if (other.tag == "Building")
+        if (other.tag == "Building" || other.tag == "Enemy" || other.tag == "Character")
+        {
+            canBuild = false;
+            Debug.Log("false");
+        }
+
+        if (other.tag == "Terrain")
+        {
+            canBuild = true;
+        }
+    }
+
+
+    void OnTriggerExit(Collider other)
+        {
+        if (other.tag == "Building" || other.tag == "Enemy" || other.tag == "Character")
         {
             canBuild = true;
             Debug.Log("true");
 
+           }
         }
-    }
     
 
     void Update()
