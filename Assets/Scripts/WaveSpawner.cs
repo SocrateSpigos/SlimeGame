@@ -6,7 +6,8 @@ public class WaveSpawner : MonoBehaviour
 {
 
     public enum SpawnState { SPAWNING, WAITING, COUNTING};
-    
+   // var gos : GameObject[];
+
     
     [System.Serializable]
     public class Wave
@@ -32,6 +33,8 @@ public class WaveSpawner : MonoBehaviour
 
     void Start()
     {
+        //gos = GameObject.FindGameObjectsWithTag("Enemy");
+
         waveCountdown = timeBetweenWaves;
 
         if (spawnPoints.Length == 0)
@@ -52,7 +55,10 @@ public class WaveSpawner : MonoBehaviour
             {
                 return;
             }
+
+            
         }
+
 
 
         if (waveCountdown <= 0)
@@ -93,7 +99,7 @@ public class WaveSpawner : MonoBehaviour
             if (searchCountdown <= 0f)
         {
             searchCountdown = 1;
-            if (GameObject.FindGameObjectWithTag("Enemy") == null)
+            if (GameObject.FindGameObjectsWithTag("Enemy").Length == 3)
             {
                 return false;
             }

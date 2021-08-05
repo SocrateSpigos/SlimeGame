@@ -42,9 +42,18 @@ public class PlayerHP : MonoBehaviour
    {
     
 		currentHealth -= damage;
+		healthBar.SetHealth(currentHealth);
+
+
+	}
+
+	public void Heal(int heal)
+	{
+		currentHealth += heal;
 
 		healthBar.SetHealth(currentHealth);
- 	}
+
+	}
 
 	public void Die()
     {
@@ -53,13 +62,6 @@ public class PlayerHP : MonoBehaviour
 		Destroy(healthUI);
 	}
 
-	/*void OnTriggerStay(Collider other)
-    {
-		if (other.tag == "Enemy")
-        {
-			InvokeRepeating("TakeDamage", 2.0f, 0.3f);
-
-		}
-	}*/
+	
 
 }

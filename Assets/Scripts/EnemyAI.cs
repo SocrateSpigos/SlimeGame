@@ -9,21 +9,37 @@ public class EnemyAI : MonoBehaviour
     public float rotationSpeed = 5;
     private Rigidbody rb;
     private Animator anim;
+    public Animator enemyAnim;
     public PlayerHP playerHp;
+    public EnemyHP enemyHp;
     public int damage;
     private bool takeDamage =false;
+    private GameObject player;
+
+    public float range = 5f;
+
 
     void Start()
     {
+
+
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
+        enemyAnim = GetComponent<Animator>();
+       
+       /* player = GameObject.Find("Player");
+        target = player.transform.Find("Player");*/
 
-        
     }
 
+  
 
     void Update()
     {
+       // target = player.transform.Find("Player");
+       // Debug.Log(target.transform.position);
+
+
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(target.position - transform.position), rotationSpeed * Time.deltaTime);
         transform.position += transform.forward * Time.deltaTime * moveSpeed;
 
@@ -38,6 +54,12 @@ public class EnemyAI : MonoBehaviour
             anim.SetBool("Attack", true);
             anim.SetBool("Walk", false);
         }
+
+        /*if(other.tag == "Bullet")
+        {
+            Debug.Log("Die");
+            enemyAnim.SetBool("Die",true);
+        }*/
 
     }
 

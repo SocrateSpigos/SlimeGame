@@ -71,9 +71,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlimePBR (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6941589352213992519, guid: cf46e25622ba06944a477346ec451433, type: 3}
+      propertyPath: m_Name
+      value: SlimePBR (1) Variant 1 Variant
+      objectReference: {fileID: 0}
     - target: {fileID: 8028918564571737821, guid: cf46e25622ba06944a477346ec451433, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8114769105262213817, guid: cf46e25622ba06944a477346ec451433, type: 3}
+      propertyPath: damage
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8114769105262213817, guid: cf46e25622ba06944a477346ec451433, type: 3}
       propertyPath: player

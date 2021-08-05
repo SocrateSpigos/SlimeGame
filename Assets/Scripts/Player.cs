@@ -9,12 +9,17 @@ public class Player : MonoBehaviour
     public VariableJoystick joystick;
     public Animator anim;
     private int currentHP;
+    public ParticleSystem Coins;
+    
+    public GameObject levelingMenu;
+    public GameObject joy;
 
 
     void Awake()
     {
         myBody = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
+        Coins.Stop();
 
     }
     
@@ -47,6 +52,47 @@ public class Player : MonoBehaviour
             moveForce = 0f;
         }
 
+        if (levelingMenu.activeInHierarchy && playerHp.currentHealth > 0)
+        {
+            moveForce = 0f;
+
+        }
+        else
+        {
+            moveForce = 500f;
+
+        }
+
     }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Refinery" && ScoreSystem.slimeScore > 2)
+        {
+            Coins.Play();
+        }
+        else
+        {
+            Coins.Stop();
+
+        }
+        
+       /* if (other.tag == "levelingMenu" )
+        {
+            joy.SetActive(false);
+            levelingMenu.SetActive(true);
+            Time.timeScale = 0;
+
+        }
+
+        else
+        {
+            joy.SetActive(true);
+            Time.timeScale = 1;
+            levelingMenu.SetActive(false);
+
+        }*/
+    }
+
 
 }

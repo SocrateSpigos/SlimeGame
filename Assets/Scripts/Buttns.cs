@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Buttns : MonoBehaviour
 {
-    private Button btn;
+    public Button btn;
     public int price;
     public BuildSelection builder;
     public GameObject canvas;
@@ -26,14 +26,11 @@ public class Buttns : MonoBehaviour
     void Update()
     {
         hub = builder.cM;
-        Debug.Log("hub");
-        if (ScoreSystem.goldScore > price)
+        
+        if (builder.cM && ScoreSystem.goldScore > price)
         {
-            if (hub)
-            {
 
-                btn.interactable = true;
-            }
+                btn.interactable = true;      
         }
 
         else

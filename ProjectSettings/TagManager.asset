@@ -11,6 +11,10 @@ TagManager:
   - Trigger
   - Enemy
   - Character
+  - Bullet
+  - Refinery
+  - LevelingStation
+  - levelingMenu
   layers:
   - Default
   - TransparentFX
