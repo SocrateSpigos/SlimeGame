@@ -59,7 +59,7 @@ MonoBehaviour:
   speed: 10
   rotatingPart: {fileID: 1724012088463454996}
   enemyTag: Enemy
-  range: 15
+  range: 8
   fireRate: 1
   fireCountdown: 0
   bulletPrefab: {fileID: 2564499919792170532, guid: a1085f7e6d8ba9f499497340e00f0d67, type: 3}
@@ -129,7 +129,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2381009720338081489, guid: e06b53563bd0e4a488b005a61f745126, type: 3}
       propertyPath: m_Name
-      value: Turret_basic_lvl1 (1) Variant
+      value: Turret_basic_lvl1 (1) Variant Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3121174195456497236, guid: e06b53563bd0e4a488b005a61f745126, type: 3}
+      propertyPath: m_Size.x
+      value: 1.8947073
+      objectReference: {fileID: 0}
+    - target: {fileID: 3121174195456497236, guid: e06b53563bd0e4a488b005a61f745126, type: 3}
+      propertyPath: m_Size.y
+      value: 0.94347864
+      objectReference: {fileID: 0}
+    - target: {fileID: 3121174195456497236, guid: e06b53563bd0e4a488b005a61f745126, type: 3}
+      propertyPath: m_Size.z
+      value: 1.6609702
+      objectReference: {fileID: 0}
+    - target: {fileID: 3121174195456497236, guid: e06b53563bd0e4a488b005a61f745126, type: 3}
+      propertyPath: m_Center.x
+      value: 0.05937163
+      objectReference: {fileID: 0}
+    - target: {fileID: 3121174195456497236, guid: e06b53563bd0e4a488b005a61f745126, type: 3}
+      propertyPath: m_Center.y
+      value: 0.44675925
+      objectReference: {fileID: 0}
+    - target: {fileID: 3121174195456497236, guid: e06b53563bd0e4a488b005a61f745126, type: 3}
+      propertyPath: m_Center.z
+      value: -0.03448079
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e06b53563bd0e4a488b005a61f745126, type: 3}

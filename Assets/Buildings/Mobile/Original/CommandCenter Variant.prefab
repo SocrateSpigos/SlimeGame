@@ -27,8 +27,52 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.1381226, y: 0.9967391, z: 2.0045166}
-  m_Center: {x: -0.7982025, y: 0.47229928, z: 0.06925964}
+  m_Size: {x: 2.6667786, y: 0.9967391, z: 1.658783}
+  m_Center: {x: -0.731369, y: 0.47229928, z: 0.039871216}
+--- !u!1 &8319428542440434841
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5601709512835668225}
+  - component: {fileID: 1764127393339677375}
+  m_Layer: 0
+  m_Name: Colliders
+  m_TagString: Building
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5601709512835668225
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8319428542440434841}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 728432158153330817}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1764127393339677375
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8319428542440434841}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.6206207, y: 0.9967391, z: 2.6363678}
+  m_Center: {x: -0.81186676, y: 0.47229928, z: 0.075401306}
 --- !u!1001 &728432158153460225
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -113,5 +157,10 @@ PrefabInstance:
 --- !u!1 &728432158153428129 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 5e301659520745a46a0c3fc4e790b356, type: 3}
+  m_PrefabInstance: {fileID: 728432158153460225}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &728432158153330817 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 5e301659520745a46a0c3fc4e790b356, type: 3}
   m_PrefabInstance: {fileID: 728432158153460225}
   m_PrefabAsset: {fileID: 0}

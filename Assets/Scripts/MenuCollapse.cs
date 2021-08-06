@@ -26,6 +26,7 @@ public class MenuCollapse : MonoBehaviour
                 anim.SetBool("show", !isOpen);
                 cam.SetBool("show", !isOpen);
                 Joystick.SetActive(isOpen);
+
             }
 
         }

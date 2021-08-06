@@ -10,7 +10,10 @@ public class Player : MonoBehaviour
     public Animator anim;
     private int currentHP;
     public ParticleSystem Coins;
-    
+    public ParticleSystem Health;
+    private PlayerHP playerHp;
+
+
     public GameObject levelingMenu;
     public GameObject joy;
 
@@ -52,16 +55,7 @@ public class Player : MonoBehaviour
             moveForce = 0f;
         }
 
-        if (levelingMenu.activeInHierarchy && playerHp.currentHealth > 0)
-        {
-            moveForce = 0f;
-
-        }
-        else
-        {
-            moveForce = 500f;
-
-        }
+        
 
     }
 
@@ -76,22 +70,32 @@ public class Player : MonoBehaviour
             Coins.Stop();
 
         }
-        
-       /* if (other.tag == "levelingMenu" )
+
+        if (other.tag == "MedBay" && ScoreSystem.goldScore > 0 && playerHp.currentHealth <100)
         {
-            joy.SetActive(false);
-            levelingMenu.SetActive(true);
-            Time.timeScale = 0;
+            Health.Play();
+        }
+        else
+        {
+            Health.Stop();
 
         }
 
-        else
-        {
-            joy.SetActive(true);
-            Time.timeScale = 1;
-            levelingMenu.SetActive(false);
+        /* if (other.tag == "levelingMenu" )
+         {
+             joy.SetActive(false);
+             levelingMenu.SetActive(true);
+             Time.timeScale = 0;
 
-        }*/
+         }
+
+         else
+         {
+             joy.SetActive(true);
+             Time.timeScale = 1;
+             levelingMenu.SetActive(false);
+
+         }*/
     }
 
 

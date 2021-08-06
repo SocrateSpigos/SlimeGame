@@ -13,18 +13,39 @@ public class MedBay : MonoBehaviour
         playerHp = GameObject.Find("Player").GetComponent<PlayerHP>();
     }
 
-    void OnTriggerStay(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Character")
         {
-            while (ScoreSystem.goldScore > 0 && playerHp.currentHealth < 100)
+           if (ScoreSystem.goldScore > 0 && playerHp.currentHealth < 100)
             {
-                
-                ScoreSystem.goldScore -= 1;
-                playerHp.Heal(1);
+                InvokeRepeating("Healing", 0, 1f);
+
             }
+
+
+            /*  while (ScoreSystem.goldScore > 0 && playerHp.currentHealth < 100)
+          {
+              ScoreSystem.goldScore -= 1;
+              playerHp.Heal(1);
+
+
+          }*/
         }
 
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        CancelInvoke("Healing");
+
+    }
+
+
+    void Healing()
+    {
+        ScoreSystem.goldScore -= 1;
+        playerHp.Heal(5);
     }
     void Update()
     {

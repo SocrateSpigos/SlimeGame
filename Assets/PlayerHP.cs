@@ -11,6 +11,7 @@ public class PlayerHP : MonoBehaviour
 	public HealthBar healthBar;
 	public GameObject healthUI;
 
+
     // Start is called before the first frame update
     void Start()
     {

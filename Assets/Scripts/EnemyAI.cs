@@ -15,6 +15,8 @@ public class EnemyAI : MonoBehaviour
     public int damage;
     private bool takeDamage =false;
     private GameObject player;
+    public Animator damageAnim;
+
 
     public float range = 5f;
 
@@ -53,6 +55,8 @@ public class EnemyAI : MonoBehaviour
         {
             anim.SetBool("Attack", true);
             anim.SetBool("Walk", false);
+
+            InvokeRepeating("Damaged", 0, 1f);
         }
 
         /*if(other.tag == "Bullet")
@@ -68,7 +72,6 @@ public class EnemyAI : MonoBehaviour
         if (other.tag == "Character")
         {
 
-            playerHp.TakeDamage(1);
 
 
         }
@@ -82,6 +85,11 @@ public class EnemyAI : MonoBehaviour
 
             anim.SetBool("Attack", false);
             anim.SetBool("Walk", true);
+
+            CancelInvoke("Damaged");
+            damageAnim.SetBool("Damage", false);
+
+
         }
     }
 
@@ -93,6 +101,8 @@ public class EnemyAI : MonoBehaviour
             anim.SetBool("Attack", false);
             anim.SetBool("Walk", false);
             moveSpeed = 0;
+            damageAnim.SetBool("Damage", false);
+
 
         }
     }
@@ -104,4 +114,11 @@ public class EnemyAI : MonoBehaviour
         playerHp.TakeDamage(5);
     }
 
+    public void Damaged()
+    {
+        playerHp.TakeDamage(damage);
+        damageAnim.SetBool("Damage", true);
+
+
+    }
 }

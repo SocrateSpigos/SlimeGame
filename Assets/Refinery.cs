@@ -7,6 +7,11 @@ public class Refinery : MonoBehaviour
     
     
 
+    void Start()
+    {
+        InvokeRepeating("SteadyIncome", 0f, 1f);
+    }
+
     void OnTriggerStay(Collider other)
     {
         if (other.tag == "Character")
@@ -24,8 +29,9 @@ public class Refinery : MonoBehaviour
 
    
 
-    void Update()
+    void SteadyIncome()
     {
-        
+        ScoreSystem.slimeScore += 1;
+
     }
 }
