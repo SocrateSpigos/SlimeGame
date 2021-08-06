@@ -101,7 +101,7 @@ public class EnemyAI : MonoBehaviour
             anim.SetBool("Attack", false);
             anim.SetBool("Walk", false);
             moveSpeed = 0;
-            damageAnim.SetBool("Damage", false);
+            damageAnim.enabled = false;
 
 
         }

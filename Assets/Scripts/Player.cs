@@ -55,7 +55,17 @@ public class Player : MonoBehaviour
             moveForce = 0f;
         }
 
-        
+        if (levelingMenu.activeInHierarchy)
+        {
+            //joy.SetActive(false);
+            Time.timeScale = 0;
+        }
+        else
+        {
+            //joy.SetActive(true);
+            Time.timeScale = 1;
+
+        }
 
     }
 
@@ -81,21 +91,13 @@ public class Player : MonoBehaviour
 
         }
 
-        /* if (other.tag == "levelingMenu" )
+         if (other.tag == "levelingMenu" )
          {
-             joy.SetActive(false);
              levelingMenu.SetActive(true);
-             Time.timeScale = 0;
 
          }
 
-         else
-         {
-             joy.SetActive(true);
-             Time.timeScale = 1;
-             levelingMenu.SetActive(false);
-
-         }*/
+        
     }
 
 

@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 5690096593267641224}
   m_Layer: 0
   m_Name: LevelingTrigger
-  m_TagString: LevelingStation
+  m_TagString: levelingMenu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,8 +72,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.122589, y: 0.8379101, z: 0.66542053}
-  m_Center: {x: -0.98080444, y: 0.41895506, z: 0.06665802}
+  m_Size: {x: 2.8192902, y: 0.8379101, z: 1.4936066}
+  m_Center: {x: -0.7076645, y: 0.41895506, z: 0.10910797}
 --- !u!114 &5690096593267641224
 MonoBehaviour:
   m_ObjectHideFlags: 0

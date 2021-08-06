@@ -6,11 +6,9 @@ public class LevelingStation : MonoBehaviour
 {
 
 
-    void OnTriggerEnter(Collider other)
+    void Update()
     {
-        if(other.tag == "Character")
-        {
-            //Time.timeScale = 0;
-        }
+       
     }
+
 }
