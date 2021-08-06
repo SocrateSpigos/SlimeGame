@@ -30,13 +30,13 @@ public class PlayerHP : MonoBehaviour
         }
     }
 
-
+/*
 	public void OnMouseDown()
 	{
 		TakeDamage(20);
 		healthUI.SetActive(true);
 
-	}
+	}*/
 
 
 	public void TakeDamage(int damage)

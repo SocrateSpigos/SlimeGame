@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     public Animator anim;
     private int currentHP;
     public ParticleSystem Coins;
-    public ParticleSystem Health;
+    public GameObject Health;
     private PlayerHP playerHp;
 
 
@@ -81,17 +81,18 @@ public class Player : MonoBehaviour
 
         }
 
-        if (other.tag == "MedBay" && ScoreSystem.goldScore > 0 && playerHp.currentHealth <100)
+        if (other.tag == "MedBay" && ScoreSystem.goldScore > 0 && playerHp.currentHealth < 100)
         {
-            Health.Play();
+            Health.SetActive(true);
+            Debug.Log("Healing");
         }
         else
         {
-            Health.Stop();
+            Health.SetActive(false);
 
         }
 
-         if (other.tag == "levelingMenu" )
+        if (other.tag == "levelingMenu" )
          {
              levelingMenu.SetActive(true);
 
