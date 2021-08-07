@@ -14,7 +14,7 @@ public class Turret : MonoBehaviour
 
     [Header("Unity Setup Fields")]
     public float range = 5f;
-    public float fireRate = 1f;
+    public float fireRate= 5f;
     public float fireCountdown = 0f;
 
     public GameObject bulletPrefab;

@@ -15,6 +15,7 @@ public class Buttns : MonoBehaviour
     void Start()
     {
         builder = canvas.GetComponent<BuildSelection>();
+
     }
 
     void Awake()

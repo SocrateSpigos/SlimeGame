@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &421614997
+--- !u!114 &-3021799290145998724
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,25 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 9137148635260766733}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63988d96e99d3014dae411b95e953b0a, type: 3}
+  m_Script: {fileID: 11500000, guid: 38ce46030648a4548b7ae379731c69a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LinearThrust: 25
-  MaxLinearSpeed: 3.5
-  LinearDrag: 10
-  Tilt: 15
-  AngularThrust: 3000
-  MaxAngularSpeed: 400
-  AngularDrag: 1500
-  Hover: 1
-  Eyes: {fileID: 0}
-  BlinkInterval: 3
-  Motor: {fileID: 0}
-  MotorBaseAngularSpeed: 10
-  MotorMaxAngularSpeed: 10
-  BubbleEmitter: {fileID: 0}
-  BubbleBaseEmissionRate: 10
-  BubbleMaxEmissionRate: 10
 --- !u!1001 &3689671993739277248
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -87,7 +71,9 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4504bacf1f55ee2488f80b6702b8b4eb, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -7914147147757513705, guid: 13d0fc4ee2cf7624a9c0e4f776b4a6f6, type: 3}
+    - {fileID: 4695615810462949939, guid: 13d0fc4ee2cf7624a9c0e4f776b4a6f6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 13d0fc4ee2cf7624a9c0e4f776b4a6f6, type: 3}
 --- !u!1 &9137148635260766733 stripped
 GameObject:

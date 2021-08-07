@@ -8,8 +8,10 @@ public class MenuCollapse : MonoBehaviour
     public GameObject Camera;
     public GameObject Joystick;
     public float Speed = 5f;
+    public bool changeColour;
 
-   public void ShowIdleMenu()
+
+    public void ShowIdleMenu()
     {
         
 
@@ -26,6 +28,8 @@ public class MenuCollapse : MonoBehaviour
                 anim.SetBool("show", !isOpen);
                 cam.SetBool("show", !isOpen);
                 Joystick.SetActive(isOpen);
+ 
+
 
             }
 

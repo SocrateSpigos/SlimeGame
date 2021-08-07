@@ -1,5 +1,49 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5579215540901642542
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5357294455005412742}
+  - component: {fileID: 7067207612015142308}
+  m_Layer: 2
+  m_Name: BluePrint
+  m_TagString: BluePrint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5357294455005412742
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5579215540901642542}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5800742456191405618}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &7067207612015142308
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5579215540901642542}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.3582306, y: 1.08507, z: 3.6450388}
+  m_Center: {x: -1.0456567, y: 0.542535, z: 0.9915504}
 --- !u!54 &-1058958414615617767
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -147,5 +191,10 @@ PrefabInstance:
 --- !u!1 &5800742456191832594 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 6ee056263f67ef545b373060986c8beb, type: 3}
+  m_PrefabInstance: {fileID: 5800742456191800498}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5800742456191405618 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 6ee056263f67ef545b373060986c8beb, type: 3}
   m_PrefabInstance: {fileID: 5800742456191800498}
   m_PrefabAsset: {fileID: 0}

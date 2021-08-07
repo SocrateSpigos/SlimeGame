@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     public Animator anim;
     private int currentHP;
     public ParticleSystem Coins;
-    public GameObject Health;
+    public ParticleSystem Health;
     private PlayerHP playerHp;
 
 
@@ -23,15 +23,17 @@ public class Player : MonoBehaviour
         myBody = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
         Coins.Stop();
+        Health.Stop();
+
 
     }
-    
+
 
     void Update()
     {
         PlayerHP playerHp = GetComponent<PlayerHP>();
 
-        myBody.velocity = new Vector3(joystick.Horizontal * moveForce * Time.deltaTime, myBody.velocity.y,joystick.Vertical * moveForce *Time.deltaTime);
+        myBody.velocity = new Vector3(joystick.Horizontal * moveForce * Time.deltaTime, myBody.velocity.y, joystick.Vertical * moveForce * Time.deltaTime);
 
         if (playerHp.currentHealth > 0)
         {
@@ -74,6 +76,7 @@ public class Player : MonoBehaviour
         if (other.tag == "Refinery" && ScoreSystem.slimeScore > 2)
         {
             Coins.Play();
+
         }
         else
         {
@@ -83,23 +86,42 @@ public class Player : MonoBehaviour
 
         if (other.tag == "MedBay" && ScoreSystem.goldScore > 0 && playerHp.currentHealth < 100)
         {
-            Health.SetActive(true);
+            Health.Play();
             Debug.Log("Healing");
         }
-        else
+
+
+        if (other.tag == "levelingMenu")
         {
-            Health.SetActive(false);
+            levelingMenu.SetActive(true);
 
         }
 
-        if (other.tag == "levelingMenu" )
-         {
-             levelingMenu.SetActive(true);
+     
+    }
 
-         }
+    void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "MedBay" && ScoreSystem.goldScore > 0 && playerHp.currentHealth < 100)
+        {
 
-        
+            Health.Play();
+        }
+
+
     }
 
 
+    void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "MedBay")
+        {
+
+            Health.Stop();
+
+        }
+
+
+    }
 }
+    

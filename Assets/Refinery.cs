@@ -10,6 +10,8 @@ public class Refinery : MonoBehaviour
     void Start()
     {
         InvokeRepeating("SteadyIncome", 0f, 1f);
+        ScoreSystem.goldScore -= 10;
+
     }
 
     void OnTriggerStay(Collider other)

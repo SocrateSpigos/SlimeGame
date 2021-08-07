@@ -8,9 +8,14 @@ public class BluePrint : MonoBehaviour
     Vector3 movePoint;
     public GameObject prefab;
     public bool canBuild=true;
+    private ChangeColour cc;
+    private GameObject ter;
 
     void Start()
     {
+        ter = GameObject.FindGameObjectWithTag("Terrain");
+        ChangeColour cc = ter.GetComponent<ChangeColour>();
+
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
          
         if (Physics.Raycast(ray, out hit, 50000.0f))
@@ -22,13 +27,14 @@ public class BluePrint : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Building" || other.tag =="Enemy" || other.tag =="Character" )
+        if (other.tag == "Building" || other.tag =="Enemy" || other.tag == "Character" || other.tag == "UnBuildable" )
         {
             canBuild = false;
             Debug.Log("false");
         }
+       
 
-        if (other.tag == "Terrain")
+        if (other.tag == "Terrain" && other.tag != "UnBuildable")
         {
             canBuild = true;
         }
@@ -49,16 +55,19 @@ public class BluePrint : MonoBehaviour
     }
 
 
-    void OnTriggerExit(Collider other)
-        {
+  /*  void OnTriggerExit(Collider other)
+    {
         if (other.tag == "Building" || other.tag == "Enemy" || other.tag == "Character")
         {
-            canBuild = true;
-            Debug.Log("true");
+            if (other.tag != "UnBuildable")
+            {
+                canBuild = true;
+                Debug.Log("true");
+            }
 
-           }
+
         }
-    
+    }*/
 
     void Update()
     {
@@ -78,7 +87,18 @@ public class BluePrint : MonoBehaviour
             if (canBuild)
             {
                 Instantiate(prefab, transform.position, transform.rotation);
+                //cc.SetBackToNormal();
+
                 Destroy(gameObject);
+                
+
+            }
+            else
+            {
+                //cc.SetBackToNormal();
+
+                Destroy(gameObject);
+
             }
         }
     }

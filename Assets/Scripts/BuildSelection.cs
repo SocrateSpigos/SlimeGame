@@ -24,7 +24,7 @@ public class BuildSelection : MonoBehaviour
         if (ScoreSystem.goldScore >= 20)
         {
             Instantiate(commandCenter);
-            ScoreSystem.goldScore -= 20;
+            //ScoreSystem.goldScore -= 20;
             cM = true;
         }
     }

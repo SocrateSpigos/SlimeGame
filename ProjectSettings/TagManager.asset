@@ -15,6 +15,11 @@ TagManager:
   - Refinery
   - LevelingStation
   - levelingMenu
+  - MedBay
+  - HealFX
+  - BluePrint
+  - UnBuildable
+  - Normal
   layers:
   - Default
   - TransparentFX

@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class MedBay : MonoBehaviour
 {
-    //public PlayerHP playerHp;
     private PlayerHP playerHp;
+    private GameObject healFX;
 
     void Start()
     {
         //player = GameObject.FindGameObjectWithTag("Character");
         playerHp = GameObject.Find("Player").GetComponent<PlayerHP>();
+        healFX = GameObject.Find("HealStream");
+        ScoreSystem.goldScore -= 20;
+
     }
 
     void OnTriggerEnter(Collider other)
@@ -19,7 +22,15 @@ public class MedBay : MonoBehaviour
         {
            if (ScoreSystem.goldScore > 0 && playerHp.currentHealth < 100)
             {
+
                 InvokeRepeating("Healing", 0, 1f);
+                healFX.SetActive(true);
+            }
+
+            else
+            {
+                CancelInvoke("Healing");
+              //  healFX.SetActive(false);
 
             }
 
@@ -34,12 +45,8 @@ public class MedBay : MonoBehaviour
         }
 
     }
+ 
 
-    void OnTriggerExit(Collider other)
-    {
-        CancelInvoke("Healing");
-
-    }
 
 
     void Healing()
